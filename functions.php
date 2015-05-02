@@ -5,4 +5,6 @@ function register_theme_menus() {
     ]);
 }
 add_action('init', 'register_theme_menus');
+
+add_theme_support('post-thumbnails');
 ?>
