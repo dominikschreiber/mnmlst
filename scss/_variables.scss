@@ -1,4 +1,6 @@
 // ===== colors =====================================================
+$c-black: #000000;
+$c-white: #ffffff;
 $c-red: #451616;
 $c-red-intense: #501818;
 $c-cyan-weak: #195b5a;
@@ -6,6 +8,7 @@ $c-cyan: #1b6666;
 $c-cyan-intense: #1b7272;
 
 $c-accent: $c-cyan-weak;
+$c-accent-intense: $c-cyan-intense;
 $c-accent-inverse: #7bbbba;
 
 $c-danger: $c-red;
@@ -13,6 +16,9 @@ $c-danger-i: #a47677;
 
 // ===== dimensions =================================================
 $padding: 12px;
+
+// ===== animations =================================================
+$speed-fast: .2s;
 
 // ===== fonts ======================================================
 $font-family: 'Open Sans', sans-serif;
