@@ -8,10 +8,13 @@
  * License URI: http://opensource.org/licenses/MIT
  * Tags: minimalist, text, code, responsive
  */
+@import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets';
+@import '../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
 
 @import 'variables';
 
 @import 'core-toolbar';
+@import 'core-header-panel';
 
 @import 'global';
 @import 'content';
