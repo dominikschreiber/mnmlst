@@ -3,3 +3,32 @@
 html {
     font-family: $font-family;
 }
+
+a {
+    color: $c-accent;
+    will-change: color;
+    transition: color $speed-fast;
+    
+    text-decoration: none;
+    
+    &:hover,
+    &:active,
+    &:focus {
+        color: $c-accent-intense;
+        
+        text-decoration: none;
+    }
+    
+    &.link-unstyled {
+        color: inherit;
+        text-decoration: inherit;
+        
+        &:link,
+        &:hover,
+        &:focus,
+        &:active,
+        &:visited {
+            color: inherit
+        }
+    }
+}
