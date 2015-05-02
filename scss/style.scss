@@ -1,0 +1,17 @@
+/**
+ * Theme Name: mnmlst
+ * Theme URI: http://wordpress.org/themes/mnmlst
+ * Author: Dominik Schreiber
+ * Author URI: http://wordpress.org/themes/author/dominikschreiber
+ * Description: A minimalist theme for text/code-centric WordPress instances. Uses polymerjs.
+ * License: MIT
+ * License URI: http://opensource.org/licenses/MIT
+ * Tags: minimalist, text, code, responsive
+ */
+
+@import 'variables';
+
+@import 'core-toolbar';
+
+@import 'global';
+@import 'content';
