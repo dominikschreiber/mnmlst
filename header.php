@@ -21,18 +21,18 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url') ?>">
 	<?php wp_head() ?>	
 </head>
-	
+	   
 <body>
-    <core-drawer-panel id="navigationPanel">
+    <core-drawer-panel id="navigationPanel" forceNarrow="true">
         <?php $menu_name = 'navigation-menu' ?>
         <?php if (($locations = get_nav_menu_locations()) && isset($locations[$menu_name])): ?>
             <core-header-panel drawer>
+            <?php $menu = wp_get_nav_menu_object($locations[$menu_name]) ?>
                 <core-toolbar id="navheader">
-                    <span>Menu</span>
+                    <span><?php echo $menu->name ?></span>
                 </core-toolbar>
+            <?php $menu_items = wp_get_nav_menu_items($menu->term_id) ?>
                 <core-menu>
-                <?php $menu = wp_get_nav_menu_object($locations[$menu_name]) ?>
-                <?php $menu_items = wp_get_nav_menu_items($menu->term_id) ?>
                 <?php foreach ((array) $menu_items as $key => $menu_item): ?>
                     <core-item label="<?php echo $menu_item->title ?>">
                         <a href="<?php echo $menu_item->url ?>"></a>
@@ -44,6 +44,6 @@
         <core-header-panel main>
             <core-toolbar id="mainheader">
                 <core-icon-button id="navicon" icon="menu"></core-icon-button>
-                <span><?php bloginfo('title') ?></span>
+                <a href="<?php bloginfo('url') ?>" class="link-unstyled"><?php bloginfo('title') ?></a>
             </core-toolbar>
-            <div id="content">
+            <div id="content" class="container">
